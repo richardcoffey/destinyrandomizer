@@ -1,0 +1,15 @@
+{
+  "name": "rand",
+  "version": "0.0.1",
+  "description": "destiny map randomizer",
+  "main": "rando.js",
+  "scripts": {
+    "start": "node rando.js"
+  },
+  "dependencies": {
+    "botkit": "^0.4.0",
+    "destiny-client": "^0.6.0",
+    "express": "^4.14.0"
+  },
+  "author": "Richard Coffey richardcoffey32@gmail.com"
+}
