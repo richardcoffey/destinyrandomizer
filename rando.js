@@ -41,7 +41,7 @@ const array = [
   'Cathedral of Dust',
 ];
 
-//Logging results in the console.
+//Exporting random maps.
 
 module.exports = () => {
   return (array[getRandom(array.length)]);

@@ -3,7 +3,7 @@
  * Creating a function for the slackbot that shows the emblem of the defined person. 
  */
 
-const destiny = require('destiny-client')('84445f639c1f45c5ae4341957eaeef74')
+const destiny = require('destiny-client')('')
 
 /**
  * Resolves HTML for game page.

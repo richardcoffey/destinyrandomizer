@@ -1,6 +1,7 @@
 const Botkit = require('botkit');
-const Rando = require('./rando.js')
-const Emblem = require('./emblems.js')
+const Rando = require('./rando.js');
+const Emblem = require('./emblems.js');
+const Convo = require('./convo.js');
 
 
 
@@ -8,17 +9,25 @@ const controller = Botkit.slackbot();
 
 var bot = controller.spawn({
 
-  token: "xoxb-95631118145-wFiDRns6BhjtwXSz8HzfR1pV"
+  token: "xoxb-95631118145-4baYraf6ZCpaWKrutH2K2Qdp"
 
 });
 
 bot.startRTM(function (err, bot, payload) {
 
   if (err) {
+    console.log(err)
     throw Error('Could not connect to Slack');
 
   }
 });
+
+controller.hears(["weedbot",], ["direct_message", "direct_mention", "ambient"], function (bot, message) {
+
+  const inputConvo = message.match[0];
+  bot.reply(message, Convo());
+
+})
 
 controller.hears(["Random",], ["direct_message", "direct_mention", "mention", "ambient"], function (bot, message) {
 
@@ -75,4 +84,10 @@ controller.hears(["Whats your favorite pet?",], ["direct_message", "direct_menti
   bot.reply(message, "https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg");
   bot.reply(message, "So dank, much wow.");
 
-})
+});
+
+controller.hears(["weedbot",], ["direct_message", "direct_mention", "ambient"], function (bot, message) {
+  
+  bot.reply(message, "stfu");
+
+});
