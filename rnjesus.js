@@ -9,7 +9,7 @@ const controller = Botkit.slackbot();
 
 var bot = controller.spawn({
 
-  token: "xoxb-95631118145-4baYraf6ZCpaWKrutH2K2Qdp"
+  token: process.env.SLACK_API_KEY
 
 });
 

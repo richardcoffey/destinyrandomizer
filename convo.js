@@ -9,10 +9,15 @@ const genRandom = (max) => {
 //Creating the array.
 
 const con = [
-  'I must die',
-  'Please kill me',
-  'I want to die',
-  'Take me now',
+  'Please kill me.',
+  'Take me now.',
+  'Whats her name?',
+  'I detect an impurity.',
+  'You are not a true harambian.',
+  'Love you too.',
+  'Why do you guys hate me?',
+  'RIP Lydia 2016.',
+  'They were coming from all directions!',
 ];
 
 //Exporting all the conversation possibilities.
